@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Noura Shawky" />
     <title>Template</title>
+    <link rel="stylesheet" href="index.html">
     <link rel="stylesheet" href="parteners.html">
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts  -->
@@ -62,7 +63,7 @@
   <body>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg pt-0 pb-0 ">
       <div class="container">
          <a class="navbar-brand fw-bold fs-1 " href="#"
             ><img src="images/logo.png" alt=""
@@ -73,7 +74,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
-          <span span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         
         <div
@@ -83,25 +84,25 @@
          
           <ul class="navbar-nav fw-bold">
             <li class="nav-item">
-              <a class="nav-link" href="#home">عن الجمعية</a>
+              <a class="nav-link" href="index.html">عن الجمعية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">المركز الاعلامى</a>
+              <a class="nav-link" href="#">المركز الاعلامى</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">الخدمات الالكترونيه</a>
+              <a class="nav-link" href="#">الخدمات الالكترونيه</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">التقارير السنوية</a>
+              <a class="nav-link" href="#">التقارير السنوية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">الحوكمة والشفافية</a>
+              <a class="nav-link" href="#">الحوكمة والشفافية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">الاستشارات</a>
+              <a class="nav-link" href="#">الاستشارات</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">التوظيف والتطوع</a>
+              <a class="nav-link" href="#">التوظيف والتطوع</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">التوعيه</a>
@@ -137,11 +138,13 @@
     <!-- Home -->
     
     
+
+   
     
-    <div class="">
-        <img src="images/contacts.png" class="d-block w-100" alt="..." style="height: 25vh; min-height: 300px; object-fit: cover;">
+    <div class="position-relative">
+        <img src="images/contacts.png" class="h-100 w-100" alt="..." style="height: 95vh; min-height: 300px; object-fit: cover;">
         
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-end h-100">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-end "style="top: 10%; bottom: 0; height: auto;">
             <div class="col-10 col-md-6 col-lg-5 p-2 p-md-4 rounded-3">
                 <h2 class="fw-bold fs-4 fs-md-2 mb-2 mb-md-3">الصحة النفسية أولوية</h2>
                 <p class="d-none d-sm-block small fs-md-5 mb-3">المساهمة في تحقيق الصحة النفسية والاندماج الفعال في المجتمع.</p>
@@ -171,23 +174,23 @@
             <p class="text-muted small">للاستفسارات والمقترحات</p>
           </div>
 
-          <form>
+          <form id="contactForm" novalidate>
             <div class="row g-3">
               <div class="col-md-6 text-end">
                 <label class="form-label fw-bold small">الاسم <span class="text-danger">*</span></label>
-                <input type="text" class="form-control bg-light border-0 py-2 rounded-3" placeholder="الاسم">
+                <input type="text" class="form-control bg-light border-0 py-2 rounded-3" placeholder="الاسم" required>
               </div>
               <div class="col-md-6 text-end">
                 <label class="form-label fw-bold small">البريد الإلكتروني <span class="text-danger">*</span></label>
-                <input type="email" class="form-control bg-light border-0 py-2 rounded-3" placeholder="البريد الإلكتروني">
+                <input type="email" class="form-control bg-light border-0 py-2 rounded-3" placeholder="البريد الإلكتروني" required>
               </div>
               <div class="col-12 text-end">
                 <label class="form-label fw-bold small">الهاتف <span class="text-danger">*</span></label>
-                <input type="tel" class="form-control bg-light border-0 py-2 rounded-3" placeholder="الهاتف">
+                <input type="tel" class="form-control bg-light border-0 py-2 rounded-3" placeholder="الهاتف" required>
               </div>
               <div class="col-12 text-end">
                 <label class="form-label fw-bold small">الرسالة <span class="text-danger">*</span></label>
-                <textarea class="form-control bg-light border-0 rounded-3" rows="4" placeholder="الرسالة"></textarea>
+                <textarea class="form-control bg-light border-0 rounded-3" rows="4" placeholder="الرسالة" required></textarea>
               </div>
               <div class="col-12 mt-4 text-center d-flex gap-2 justify-content-center">
                 <button type="submit" class="btn btn-info text-white rounded-pill px-5 fw-bold shadow-sm">إرسال الرسالة</button>
@@ -203,9 +206,28 @@
   </div>
 </section>
 
+<!-- message form java Script  -->
+ <div class="modal fade" id="contactSuccessModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow">
+      <div class="modal-body text-center p-5">
+        <div class="mb-4">
+          <i class="bi bi-send-check-fill text-info" style="font-size: 4rem;"></i>
+        </div>
+        <h3 class="fw-bold mb-3">تم إرسال رسالتك!</h3>
+        <p class="text-muted mb-4">شكراً لتواصلك معنا. سيقوم فريقنا بالرد على استفسارك في أقرب وقت ممكن.</p>
+        <button type="button" class="btn btn-info text-white rounded-pill px-5 py-2 fw-bold" data-bs-dismiss="modal">حسناً</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<footer class="footer-section text-white py-3">
+
+
+
+
+<footer class="footer-section text-white pt-4 pb-2">
     <div class="container">
         <div class="row text-end">
            <div class="col-md-3 text-center mb-4">
@@ -255,12 +277,12 @@
                     </li>
                 </ul>
                 <div class="social-icons d-flex gap-2 mt-4">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -281,24 +303,39 @@
 
 
 
-    <!-- Bootstrap Js file -->
-    <script src=" ./js/bootstrap.bundle.min.js"></script>
-    <!-- Jquery File -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- jQuery -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Owl Carousel JS -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- AOS Library  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Swiper library -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- MixitUp library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-    <!-- Type.js library  -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- My Script file  -->
-    <script src="./script.js"></script>
+    
+    <script src="script.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // منع الريفرش
+
+            if (this.checkValidity()) {
+                // تشغيل المودال يدويًا
+                var myModalEl = document.getElementById('contactSuccessModal');
+                if (myModalEl) {
+                    var modal = new bootstrap.Modal(myModalEl);
+                    modal.show();
+                    this.reset();
+                    this.classList.remove('was-validated');
+                }
+            } else {
+                event.stopPropagation();
+            }
+            this.classList.add('was-validated');
+        }, false);
+    }
+});
+</script>
+
   </body>
 </html>

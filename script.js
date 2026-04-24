@@ -1,33 +1,43 @@
-let serviceItems = document.querySelectorAll('#servicesCarousel .carousel-item');
-
-serviceItems.forEach((el) => {
-    const minPerSlide = 4; // عدد الكروت المطلوب ظهورها
-    let next = el.nextElementSibling;
-    for (var i = 1; i < minPerSlide; i++) {
-        if (!next) {
-            next = serviceItems[0]; // لو وصلنا لآخر كارت يرجع للأول
-        }
-        let cloneChild = next.cloneNode(true);
-        el.appendChild(cloneChild.children[0]);
-        next = next.nextElementSibling;
+// دالة واحدة بتشغل أي سلايدر نبعت لها الـ ID بتاعه
+function initializeMultiSlider(carouselId) {
+    let items = document.querySelectorAll(carouselId + ' .carousel-item');
+    
+    if (items.length > 0) {
+        items.forEach((el) => {
+            const minPerSlide = 4;
+            let next = el.nextElementSibling;
+            for (var i = 1; i < minPerSlide; i++) {
+                if (!next) {
+                    next = items[0];
+                }
+                let cloneChild = next.cloneNode(true);
+                el.appendChild(cloneChild.children[0]);
+                next = next.nextElementSibling;
+            }
+        });
     }
-});
+}
+
+// دلوقتي هننادي الدالة مرتين.. مرة لكل سلايدر باسمه الجديد
+initializeMultiSlider('#mediaCenterCarousel');  // السلايدر اللي تحت
 
 
+document.getElementById('partnershipForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-let serviceItems = document.querySelectorAll('#servicesCarousel .carousel-item');
+    if (!this.checkValidity()) {
+        event.stopPropagation();
+        // ممكن هنا تسيبها تطلع الـ validation بتاع البوتستراب العادي (الأحمر)
+    } else {
+        // تشغيل نافذة النجاح البروفيشنال
+        var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+        myModal.show();
 
-serviceItems.forEach((el) => {
-    const minPerSlide = 4; // عدد الكروت المطلوب ظهورها معاً
-    let next = el.nextElementSibling;
-    for (var i = 1; i < minPerSlide; i++) {
-        if (!next) {
-            // إذا وصلنا للنهاية، ابدأ من أول كارت
-            next = serviceItems[0];
-        }
-        let cloneChild = next.cloneNode(true);
-        // إضافة محتوى الكارت التالي داخل الشريحة الحالية
-        el.appendChild(cloneChild.children[0]);
-        next = next.nextElementSibling;
+        this.reset(); // تصفير الفورم
+        this.classList.remove('was-validated'); // إزالة علامات التحقق بعد التصفير
     }
-});
+    
+    this.classList.add('was-validated');
+}, false);
+
+

@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
 .btn-home{
     
     font-size: 15px;
@@ -63,13 +68,7 @@
         color: var(--dark-blue) !important;
     }
 
-    .card {
-        transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-    }
+    
 
     .card-img-top {
         height: 250px;
@@ -208,3 +207,83 @@
 .service-card:hover p {
     color: white !important;
 }
+
+[data-theme="dark"] {
+    --dark-blue: #0a1128;
+    --main-blue: #00d2ff;
+    background-color: #0a1128;
+    color: white;
+}
+
+/* تنسيق الـ Navbar والروابط */
+.navbar-nav .nav-link {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600; /* وزن الخط ليكون واضحاً */
+    font-size: 1.05rem;
+    color: var(--dark-blue) !important;
+    position: relative;
+    padding: 0.5rem  !important;
+    transition: color 0.3s ease;
+}
+
+/* حركة الخط اللي بيظهر تحت الرابط عند الوقوف عليه */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 50%;
+    background-color: var(--main-blue);
+    transition: all 0.3s ease;
+    transform: translateX(50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--main-blue) !important;
+}
+/* كلاس سيتم إضافته بواسطة الجافاسكريبت عند السكرول */
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important; /* خلفية شفافة بسيطة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ظل ناعم */
+    padding: 5px 0 !important; /* تقليل مساحة الناف بار */
+}
+
+/* الحالة قبل الظهور */
+.hidden-animation {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+/* الحالة بعد الظهور */
+.show-animation {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* تطبيق الخط على الموقع بالكامل مع استثناء الأيقونات */
+*:not(i):not(.fa):not(.fab):not(.fas):not(.far) {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* تأكيد بقاء خط الأيقونات كما هو */
+.fa, .fas, .far, .fab, i {
+    font-family: "Font Awesome 5 Free" !important; /* أو الإصدار اللي بتستخدمه */
+    font-weight: 900; 
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+

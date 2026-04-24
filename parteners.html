@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Noura Shawky" />
     <title>Template</title>
-    <link rel="stylesheet" href="parteners.html">
+    
+    
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,14 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <!-- Swiper Slider  -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <!-- Bootstrap css  -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!--  AoS Animation  -->
     <link
       rel="stylesheet"
@@ -29,7 +30,7 @@
     />
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> -->
     <!-- My Style Sheet  -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- Font Awesome  -->
     <link
       rel="stylesheet"
@@ -62,7 +63,7 @@
   <body>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg">
+   <nav class="navbar navbar-expand-lg pt-0 pb-0">
       <div class="container">
          <a class="navbar-brand fw-bold fs-1 " href="#"
             ><img src="images/logo.png" alt=""
@@ -83,7 +84,7 @@
          
           <ul class="navbar-nav fw-bold">
             <li class="nav-item">
-              <a class="nav-link" href="#home">عن الجمعية</a>
+              <a class="nav-link" href="index.html">عن الجمعية</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#home">المركز الاعلامى</a>
@@ -95,7 +96,7 @@
               <a class="nav-link" href="#home">التقارير السنوية</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#home">الحوكمة والشفافية</a>
+              <a class="nav-link" href="#home">الحوكمةوالشفافية</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#home">الاستشارات</a>
@@ -120,7 +121,7 @@
 
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="parteners.html">الشركاء</a></li>
-                <li><a class="dropdown-item" href="#">طلب شراكه</a></li>
+                <li><a class="dropdown-item" href="parteners.html">طلب شراكه</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -136,21 +137,21 @@
 
     <!-- Home -->
 
-
-
-    <div class="">
-      <img src="images/parteners.png" class="d-block w-100" alt="..." style="height: 25vh; min-height: 300px; object-fit: cover;">
-      
-      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-end h-100">
+    <div class="position-relative">
+    <img src="images/parteners.png" class=" w-100 h-100" alt="..." style="height: 95vh; min-height: 300px; object-fit: cover;">
+    
+    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-end" 
+         style="top: 10%; bottom: 0; height: auto;">
+         
         <div class="col-10 col-md-6 col-lg-5 p-2 p-md-4 rounded-3">
-          <h2 class="fw-bold fs-4 fs-md-2 mb-2 mb-md-3">الصحة النفسية أولوية</h2>
-          <p class="d-none d-sm-block small fs-md-5 mb-3">المساهمة في تحقيق الصحة النفسية والاندماج الفعال في المجتمع.</p>
-          <button type="button" class="btn btn-info text-white rounded-pill px-3 px-md-5 py-1 py-md-2 shadow-sm fw-bold border-0">
-            اعرف المزيد
-          </button>
+            <h2 class="fw-bold fs-4 fs-md-2 mb-2 mb-md-3">الصحة النفسية أولوية</h2>
+            <p class="d-none d-sm-block small fs-md-5 mb-3">المساهمة في تحقيق الصحة النفسية والاندماج الفعال في المجتمع.</p>
+            <button type="button" class="btn btn-info text-white rounded-pill px-3 px-md-5 py-1 py-md-2 shadow-sm fw-bold border-0">
+                اعرف المزيد
+            </button>
         </div>
-      </div>
     </div>
+</div>
 
 
     <div class="partnership-page py-5" style="background-color: #f4f7f9; min-height: 100vh; direction: rtl;">
@@ -166,14 +167,14 @@
           <form id="partnershipForm">
             <div class="row g-4">
               <div class="col-md-6 text-end">
-                <label class="form-label fw-bold">الاسم <span class="text-danger">*</span></label>
-                <input type="text" class="form-control border-light py-2 bg-light rounded-3" placeholder="الاسم">
+                <label class="form-label fw-bold" >الاسم <span class="text-danger">*</span></label>
+                <input type="text" class="form-control border-light py-2 bg-light rounded-3" placeholder="الاسم" required>
               </div>
               
               <div class="col-md-6 text-end">
                 <label class="form-label fw-bold">نوع الجهة <span class="text-danger">*</span></label>
-                <select class="form-select border-light py-2 bg-light rounded-3">
-                  <option selected disabled>نوع الجهة</option>
+                <select class="form-select border-light py-2 bg-light rounded-3" required>
+                  <option value="" selected disabled  >نوع الجهة</option>
                   <option>القطاع الحكومي</option>
                   <option>القطاع الخاص</option>
                   <option>القطاع غير الربحي</option>
@@ -182,17 +183,17 @@
 
               <div class="col-md-6 text-end">
                 <label class="form-label fw-bold">البريد الإلكتروني <span class="text-danger">*</span></label>
-                <input type="email" class="form-control border-light py-2 bg-light rounded-3" placeholder="البريد الإلكتروني">
+                <input type="email" class="form-control border-light py-2 bg-light rounded-3" placeholder="البريد الإلكتروني" required>
               </div>
 
               <div class="col-md-6 text-end">
                 <label class="form-label fw-bold">الهاتف <span class="text-danger">*</span></label>
-                <input type="tel" class="form-control border-light py-2 bg-light rounded-3" placeholder="الهاتف">
+                <input type="tel" class="form-control border-light py-2 bg-light rounded-3" placeholder="الهاتف" required>
               </div>
 
               <div class="col-12 text-end">
                 <label class="form-label fw-bold">موضوع الشراكة <span class="text-danger">*</span></label>
-                <textarea class="form-control border-light bg-light rounded-3" rows="4" placeholder="موضوع الشراكة"></textarea>
+                <textarea class="form-control border-light bg-light rounded-3" rows="4" placeholder="موضوع الشراكة" required></textarea>
               </div>
 
               <div class="col-12 d-flex gap-3 mt-4">
@@ -208,10 +209,25 @@
   </div>
 </div>
 
+<!-- message form for Java Script -->
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow">
+      <div class="modal-body text-center p-5">
+        <div class="mb-4">
+          <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+        </div>
+        <h3 class="fw-bold mb-3">تم الإرسال بنجاح!</h3>
+        <p class="text-muted mb-4">شكراً لتواصلك معنا، سنتواصل معك في أقرب وقت ممكن.</p>
+        <button type="button" class="btn btn-info text-white rounded-pill px-5 py-2 fw-bold" data-bs-dismiss="modal">رائع</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-
-<footer class="footer-section text-white py-3">
+<footer class="footer-section text-white pt-4 pb-2">
     <div class="container">
         <div class="row text-end">
            <div class="col-md-3 text-center mb-4">
@@ -261,12 +277,12 @@
                     </li>
                 </ul>
                 <div class="social-icons d-flex gap-2 mt-4">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -287,13 +303,10 @@
 
 
 
+
+
     <!-- Bootstrap Js file -->
     <script src=" ./js/bootstrap.bundle.min.js"></script>
-    <!-- Jquery File -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- AOS Library  -->
@@ -305,6 +318,6 @@
     <!-- Type.js library  -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- My Script file  -->
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
